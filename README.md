@@ -1,5 +1,5 @@
-# Color-Saori
-Color Saori Basic made by Teacup/Zdzisiu
+# Image Manipulation Saori Basic
+IMS made by Teacup/Zdzisiu
 
 requires proxy_ex.dll to run
 
