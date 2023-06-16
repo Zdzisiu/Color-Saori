@@ -6,7 +6,7 @@ IMS provides various image generation and manipulation functions.
 
 **IMS requires the `proxy_ex.dll` to run**
 
-## SUPPORTED FUNCITONS:
+## SUPPORTED FUNCTIONS:
 
 - [x] Generating a color filled image file
 - [x] Resizing an image
