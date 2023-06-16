@@ -1,71 +1,36 @@
-# Image Manipulation Saori Basic
-IMS made by Teacup/Zdzisiu
+# Image Manipulation Saori-Basic - IMS
 
-requires proxy_ex.dll to run
+IMS provides various image generation and manipulation functions.
 
-# FUNCTIONS:
-## Generating a color image file using RGB:
-	argument 1: "color"
-	argument 2: height
-	argument 3: width
-	argument 4: R/Red value
-	argument 5: G/Green value
-	argument 6: B/Blue value
-	argument 7: Alpha value (0-255)
-	argument 8: file name (without the file extension)
+*Made by Teacup/Zdzisiu*
 
-## Resizing an image:
-	argument 1: 
-		"resize_org_ratio" - resize keeping the original aspect ratio
-		"resize_new_ratio" - resize ignoring the original aspect ratio
-	argument 2: file name and path of the file to resize
-	argument 3: height
-	argument 4: width
-	argument 5: file name after resizing (include the file extension ex. .png, .jpg)
+**IMS requires the `proxy_ex.dll` to run**
 
-## Overlaying image on non-transparent pixels of the base image	
-	argument 1: "overlayfast_merge"
-	argument 2: base image file name/path
-	argument 3: overlay image file name/path
-	argument 4: output image name (without the file extension)
+## SUPPORTED FUNCITONS:
 
-
-
-# Examples of usage:
-
-## COLOR:
-Base Funcion
-```
-FUNCTIONEX("proxy_ex.dll", "color.exe", "color", height, width, R, G, B, Alpha (0-255), file name)
-```
- Generating a color, with size 400x640 and no transparency, the output file is named "yellow.png":
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","color","400","640","255","255","0","255","yellow")
-```
-
-## RESIZE:
-Base Funcion
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","resize_org_ratio"/"resize_new_ratio", file name (and path) to resize, height, height, file name after resize)
-```
-Resizing an image as closely as possible while keeping its aspect ratio and saving it as "cobra.png":
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","resize_org_ratio","cobra.jpg","400","640","cobra.png")
-```
-Resizing an image ignoring its original aspect ratio and saving it as "cobra.png" (will most likely result in a distorted image):
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","resize_new_ratio","cobra.jpg","400","640","cobra.png")
-```	
-
-## OVERLAY:
-Base Funcion
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","overlayfast_merge",base file name/path,overlay file name/path,output file name)
-```
-overlaying heart.png with red.png
-```
-FUNCTIONEX("proxy_ex.dll","color.exe","overlayfast_merge","heart.png","red.png","red_heart")
-```
-
-
-
+- [x] Generating a color filled image file
+- [x] Resizing an image
+	- [x] Resize ignoring the original ratio
+	- [x] Resize keeping the original ratio
+- [x] Overlaying an image on non-transparent pixels
+- [x] Generating gradients
+	- [x] Horizontal
+	- [x] Vertical
+	- [x] Diagonal right
+	- [x] Diagonal left
+	- [ ] Radial
+- [x] Generating color palettes
+	- [x] Generate a completely random starting color.
+	- [x] Generate a color palette based on a specific color.
+	- **Supported palette types**
+	- [x] Complementary
+	- [x] Analogous
+	- [x] Monochromatic
+	- [x] Split-complementary
+	- [x] Triadic
+	- [x] Tetradic
+	- [x] Random
+- [x] Generating lights and shadow
+- [x] Generating a palette image
+- [ ] Generating an text image
+- [ ] Gradient map
