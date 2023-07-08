@@ -146,6 +146,9 @@ elif command == "palette_image":
         colors = [(int(argv[i]), int(argv[i+1]), int(argv[i+2]), int(argv[i+3])) for i in range(5, arg_num, 4)]
         result = palette.generate_palette_image((height, width), name, colors)
     #palette_image 200 200 palette 255 0 255 235 40 225 119 75 119
+elif command == "batch_resize":
+    for x in range(1, 7):
+        result = resize.resize_org_ratio("letter/letter (" + str(x) + ").png", (60, 60), "letter/letter (" + str(x) + ").png")
 # Print the result
 if result != "":
     print(result)
